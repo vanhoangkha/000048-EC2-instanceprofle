@@ -17,7 +17,6 @@ Thông qua workshop chúng ta sẽ nắm được:
 
 + Cách thức cấp quyền truy cập cho ứng dụng thông qua accesskey/secretaccesskey và tại sao không nên sử dụng nó.
 + Cách thức cấp quyền truy cập cho ứng dụng thông qua IAM Role trên EC2.
-+ Cách thức cấp quyền truy cập cho ứng dụng thông qua IAM Role trên máy chủ on-premise.
 
 #### Nội dung
 1. [Chuẩn bị](1-prepare/)
