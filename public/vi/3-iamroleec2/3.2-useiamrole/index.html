@@ -12,21 +12,21 @@
     <title>Sử dụng IAM role :: EC2 Instance Profile</title>
 
     
-    <link href="/css/nucleus.css?1630998084" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1630998084" rel="stylesheet">
-    <link href="/css/hybrid.css?1630998084" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1630998084" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1630998084" rel="stylesheet">
-    <link href="/css/auto-complete.css?1630998084" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1630998084" rel="stylesheet">
-    <link href="/css/theme.css?1630998084" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1630998084" rel="stylesheet">
+    <link href="/css/nucleus.css?1630999251" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1630999251" rel="stylesheet">
+    <link href="/css/hybrid.css?1630999251" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1630999251" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1630999251" rel="stylesheet">
+    <link href="/css/auto-complete.css?1630999251" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1630999251" rel="stylesheet">
+    <link href="/css/theme.css?1630999251" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1630999251" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1630998084" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1630999251" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1630998084"></script>
+    <script src="/js/jquery-3.3.1.min.js?1630999251"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1630998084"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1630998084"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1630999251"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1630999251"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1630998084"></script>
+<script type="text/javascript" src="/js/search.js?1630999251"></script>
 
     
   </div>
@@ -616,11 +616,11 @@ echo <span style="color:#e6db74">&#34;s3.upload_file(&#39;test.txt&#39;, &#39;&l
 <div class="notices tip" ><p>Khi sử dụng IAM role gán vào EC2 instance ( còn gọi là EC2 instance profile ).Ứng dụng trên máy chủ EC2  truy xuất thông tin xác thực bảo mật được cung cấp bởi IAM Role từ EC2 metadata <strong>iam/ security-credentials/role-name</strong>. Ứng dụng được cấp quyền cho các hành động và tài nguyên mà chúng ta đã xác định cho IAM role thông qua thông tin xác thực bảo mật được liên kết với IAM role.</p>
 </div>
 
-<p>Chúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau :</p>
+<p>Chúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau . Chúng ta có thể thấy thông tin chứng thực có thời gian hết hạn ( <strong>Expiration</strong> ) và sẽ được tự động làm mới sau khoản thời gian hết hạn này.</p>
 <pre><code>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload
 </code></pre><p><img src="/images/role/022.png?width==90pc" alt="Role"></p>
 
-<div class="notices tip" ><p>Khi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta. Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( <strong>aws configure</strong> )</p>
+<div class="notices tip" ><p>Khi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta thông qua một dịch vụ là <strong>Security Token Service</strong> ( <strong>STS</strong> ). Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( <strong>aws configure</strong> )</p>
 </div>
 
 <p>Chạy câu lệnh sau để liệt kê S3 bucket trong account:</p>
@@ -860,19 +860,19 @@ echo <span style="color:#e6db74">&#34;s3.upload_file(&#39;test.txt&#39;, &#39;&l
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1630998084"></script>
-    <script src="/js/perfect-scrollbar.min.js?1630998084"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1630998084"></script>
-    <script src="/js/jquery.sticky.js?1630998084"></script>
-    <script src="/js/featherlight.min.js?1630998084"></script>
-    <script src="/js/highlight.pack.js?1630998084"></script>
+    <script src="/js/clipboard.min.js?1630999251"></script>
+    <script src="/js/perfect-scrollbar.min.js?1630999251"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1630999251"></script>
+    <script src="/js/jquery.sticky.js?1630999251"></script>
+    <script src="/js/featherlight.min.js?1630999251"></script>
+    <script src="/js/highlight.pack.js?1630999251"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1630998084"></script>
-    <script src="/js/learn.js?1630998084"></script>
-    <script src="/js/hugo-learn.js?1630998084"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1630999251"></script>
+    <script src="/js/learn.js?1630999251"></script>
+    <script src="/js/hugo-learn.js?1630999251"></script>
 
-    <link href="/mermaid/mermaid.css?1630998084" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1630998084"></script>
+    <link href="/mermaid/mermaid.css?1630999251" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1630999251"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

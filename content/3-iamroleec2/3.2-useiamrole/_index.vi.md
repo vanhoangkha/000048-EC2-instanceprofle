@@ -57,7 +57,8 @@ python upload-s3-usingec2role.py
 Khi sử dụng IAM role gán vào EC2 instance ( còn gọi là EC2 instance profile ).Ứng dụng trên máy chủ EC2  truy xuất thông tin xác thực bảo mật được cung cấp bởi IAM Role từ EC2 metadata **iam/ security-credentials/role-name**. Ứng dụng được cấp quyền cho các hành động và tài nguyên mà chúng ta đã xác định cho IAM role thông qua thông tin xác thực bảo mật được liên kết với IAM role.
 {{%/notice%}}
 
-Chúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau :
+Chúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau . Chúng ta có thể thấy thông tin chứng thực có thời gian hết hạn ( **Expiration** ) và sẽ được tự động làm mới sau khoản thời gian hết hạn này.
+
 ```
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload
 ```
@@ -65,7 +66,7 @@ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3u
 ![Role](/images/role/022.png?width==90pc)
 
 {{%notice tip%}}
-Khi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta. Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( **aws configure** )
+Khi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta thông qua một dịch vụ là **Security Token Service** ( **STS** ). Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( **aws configure** )
 {{%/notice%}}
 
 Chạy câu lệnh sau để liệt kê S3 bucket trong account:
