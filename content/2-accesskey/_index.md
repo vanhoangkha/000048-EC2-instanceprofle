@@ -1,19 +1,17 @@
 +++
-title = "Sử dụng access key"
-date = 2021
+title = "Use access key"
 weight = 2
 chapter = false
 pre = "<b>2. </b>"
 +++
 
 
-#### Sử dụng accesskey
+#### Using accesskey
 
-Trong phần này, chúng ta sẽ tạo một IAM user cùng với accesskey / secretaccesskey để sử dụng cho ứng dụng python của chúng ta upload 1 object lên S3 bucket chúng ta đã tạo.
+In this section, we will create an IAM user with an accesskey / secretaccesskey to use for our python application to upload an object to the S3 bucket we created.
 
 ![Role](/images/role/a01.png?width==90pc)
 
-#### Nội dung
-1. [Tạo IAM user và accesskey](2.1-createiam/)
-2. [Sử dụng accesskey](2.2-useaccesskey/)
-
+#### Content
+1. [Create IAM user and accesskey](1.1-createiam/)
+2. [Use access key](1.2-useaccesskey/)

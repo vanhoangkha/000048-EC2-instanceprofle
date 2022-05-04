@@ -1,16 +1,15 @@
 +++
-title = "Sử dụng IAM role"
-date = 2021
+title = "Using IAM role"
 weight = 2
 chapter = false
 pre = "<b>3.2 </b>"
 +++
 
 
-#### Sử dụng IAM role
-1. Truy cập vào [giao diện quản trị EC2](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#Instances:)
+#### Using IAM role
+1. Go to [EC2 admin interface](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#Instances:)
 
-  + Click chọn EC2 instance chúng ta đã tạo.
+  + Click on the EC2 instance we created.
   + Click **Actions**.
   + Click **Security**.
   + Click **Modify IAM role**.
@@ -19,16 +18,16 @@ pre = "<b>3.2 </b>"
 ![Role](/images/role/018.png?width==90pc)
 
 
-2. Click chọn role **ec2roles3upload**.
+2. Click the role **ec2roles3upload**.
   + Click **Save**.
 
 
 ![Role](/images/role/019.png?width==90pc)
 
 
-3. Quay trở lại giao diện dòng lệnh của EC2 instance.
-   + Chạy lệnh sau để tạo file ứng dụng python.
-   + Lưu ý thay  giá trị <S3BUCKETNAME> phù hợp với giá trị của bạn.
+3. Return to the command line interface of the EC2 instance.
+   + Run the following command to create a python application file.
+   + Note that the <S3BUCKETNAME> value should match your value.
 
 ```bash
 touch upload-s3-usingec2role.py
@@ -41,23 +40,23 @@ echo "s3.upload_file('test.txt', '<S3BUCKETNAME>', 'test.txt')" >> upload-s3-usi
 ![Role](/images/role/020.png?width==90pc)
 
 
-4. Thực hiện chạy ứng dụng python của chúng ta để upload file lên S3 bucket.
+4. Let's run our python application to upload files to the S3 bucket.
 
 ```
 python upload-s3-usingec2role.py
 ```
 
-5.  Truy cập vào giao diện dịch vụ S3.
+5. Access the S3 service interface.
   + Click S3 bucket **s3-instancerole-001**.
-  + Kiểm tra file đã được upload thành công lên S3 bucket.
+  + Check that the file has been successfully uploaded to the S3 bucket.
 
 ![Role](/images/role/021.png?width==90pc)
 
 {{%notice tip%}}
-Khi sử dụng IAM role gán vào EC2 instance ( còn gọi là EC2 instance profile ).Ứng dụng trên máy chủ EC2  truy xuất thông tin xác thực bảo mật được cung cấp bởi IAM Role từ EC2 metadata **iam/ security-credentials/role-name**. Ứng dụng được cấp quyền cho các hành động và tài nguyên mà chúng ta đã xác định cho IAM role thông qua thông tin xác thực bảo mật được liên kết với IAM role.
+When using an IAM role assigned to an EC2 instance (also known as an EC2 instance profile). The application on the EC2 server retrieves the security credentials provided by the IAM Role from the EC2 metadata **iam/ security-credentials/role -name**. The application is authorized for the actions and resources that we have defined for the IAM role through the security credentials associated with the IAM role.
 {{%/notice%}}
 
-Chúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau . Chúng ta có thể thấy thông tin chứng thực có thời gian hết hạn ( **Expiration** ) và sẽ được tự động làm mới sau khoản thời gian hết hạn này.
+We can check the security credentials generated for the IAM role ec2roles3upload with the following command. We can see that the credentials have an expiration time ( **Expiration** ) and will be automatically refreshed after this expiration period.
 
 ```
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload
@@ -66,10 +65,10 @@ curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3u
 ![Role](/images/role/022.png?width==90pc)
 
 {{%notice tip%}}
-Khi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta thông qua một dịch vụ là **Security Token Service** ( **STS** ). Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( **aws configure** )
+When we assign an EC2 role to an EC2 instance, the generation of temporary credentials is automatically done for us through a service called **Security Token Service** ( **STS** ). We can also use the AWS CLI in an EC2 instance that has been assigned the IAM role without any configuration. ( **aws configure** )
 {{%/notice%}}
 
-Chạy câu lệnh sau để liệt kê S3 bucket trong account:
+Run the following command to list the S3 bucket in the account:
 ```
 aws s3 ls
 ```

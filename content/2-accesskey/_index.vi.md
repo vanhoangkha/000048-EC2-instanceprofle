@@ -1,6 +1,5 @@
 +++
 title = "Sử dụng access key"
-date = 2021
 weight = 2
 chapter = false
 pre = "<b>2. </b>"

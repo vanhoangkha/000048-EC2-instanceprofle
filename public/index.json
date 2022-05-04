@@ -1,80 +1,80 @@
 [
 {
-	"uri": "/1-prepare/",
-	"title": "Chuẩn bị",
-	"tags": [],
-	"description": "",
-	"content": "Chuẩn bị Workshop Trong phần này chúng ta sẽ thực hiện tạo môi trường cho workshop bao gồm việc tạo EC2 instance và tạo S3 bucket.\nNội dung  Tạo EC2 Instance Tạo S3 bucket  "
-},
-{
-	"uri": "/",
-	"title": "Cấp quyền cho ứng dụng với IAM Role",
-	"tags": [],
-	"description": "",
-	"content": "Cấp quyền cho ứng dụng truy cập dịch vụ AWS với IAM Role Tổng quan Trong workshop này, bạn sẽ học cách cấp quyền truy cập cho ứng dụng của bạn có thể truy cập tới các dịch vụ của AWS.\nMục tiêu Thông qua workshop chúng ta sẽ nắm được:\n Cách thức cấp quyền truy cập cho ứng dụng thông qua accesskey/secretaccesskey và tại sao không nên sử dụng nó. Cách thức cấp quyền truy cập cho ứng dụng thông qua IAM Role trên EC2.  Nội dung  Chuẩn bị Sử dụng accesskey IAM role trên EC2 Dọn dẹp tài nguyên  "
-},
-{
 	"uri": "/1-prepare/1.1-createec2/",
-	"title": "Tạo EC2 Instance",
+	"title": "Create EC2 Instance",
 	"tags": [],
 	"description": "",
-	"content": "Tạo EC2 Instance  Làm theo bước 1.1.1 trong workshop giới thiệu về Amazon EC2 để tạo EC2 instance.   Bạn hãy tạo một instance Amazon Linux với cấu hình t2.micro được miễn phí bởi free tier để dùng cho workshop này.  Sử dụng putty để kết nối tới máy ảo bạn vừa tạo theo hướng dẫn ở bước 1.1.2  Tiếp theo chúng ta sẽ tạo một S3 bucket để cho ứng dụng trong máy chủ EC2 của chúng ta kết nối tới.\n"
+	"content": "Create EC2 Instance   Follow step 1.1.1 in the Amazon introductory workshop EC2 to create an EC2 instance.\n Please create an Amazon Linux instance with t2.micro configuration which is free by the free tier to use for this workshop.    Use putty to connect to the virtual machine you just created following the instructions in step 1.1.2  Next, we will create an S3 bucket for the application in our EC2 server to connect to\n"
 },
 {
 	"uri": "/3-iamroleec2/3.1-createrole/",
-	"title": "Tạo IAM role",
+	"title": "Create IAM role",
 	"tags": [],
 	"description": "",
-	"content": "Tạo IAM user và access key  Truy cập vào giao diện quản trị dịch vụ IAM   Click Roles.  Click Create role  Tại mục **Choose a use case ** chúng ta click chọn EC2 để tạo một IAM role sử dụng cho ứng dụng chạy bên trong EC2.   Click Next:Permissions  Tại ô Filter policies , điền S3.   Click chọn AmazonS3FullAccess, chúng ta sẽ cấp quyền full access để truy cập và upload file lên S3 bucket chúng ta đã tạo. Click Next: Tags.   Click Next: Review.\n  Đặt Role name là ec2roles3upload\n   Click Create role.  Tiếp theo chúng ta sẽ dùng role này để gán vào EC2 instance và giúp ứng dụng của chúng ta có thể upload file lên S3 mà không cần sử dụng access key và secret access key trong code.\n"
+	"content": "Generate IAM user and access key  Go to IAM service administration interface   Click Roles.  Click Create role  In the **Choose a use case ** section, we click on EC2 to create an IAM role to use for the application running inside EC2.   Click Next:Permissions  In the Filter policies box, enter S3.   Click AmazonS3FullAccess, we will grant full access to access and upload files to the S3 bucket we created. Click Next: Tags.   Click Next: Review.\n  Set Role name to ec2roles3upload\n   Click Create role.  Next, we will use this role to assign to the EC2 instance and make it possible for our application to upload files to S3 without using the access key and secret access key in the code.\n"
 },
 {
 	"uri": "/2-accesskey/2.1-createiam/",
-	"title": "Tạo IAM user và access key",
+	"title": "Generate IAM user and access key",
 	"tags": [],
 	"description": "",
-	"content": "Tạo IAM user và access key  Truy cập vào giao diện quản trị dịch vụ IAM   Click Users.  Click Add users  Đặt tên User name là iamaccesskey.   Click chọn Programmatic access. ( Tùy chọn này cho phép sử dụng access key và secret access key cho AWS API , CLI , SDK ) Click Next: Permissions.  Click chọn Attach existing policies directly.   Tại ô Filter policies , điền S3. Click chọn AmazonS3FullAccess, chúng ta sẽ cấp quyền full access để truy cập và upload file lên S3 bucket chúng ta đã tạo ở bước trước. Click Next: Tags.   Click Next: Review, sau đó click Create user.\n  Sau khi tạo user thành công , click Show để hiển thị giá trị Secret access key.\n   Bạn hãy lưu cặp giá trị Access key ID + Secret access key để phục vụ cho các bước sau của workshop. Bạn cũng có thể click Download .csv để down load Access key ID + Secret access key dưới dạng csv.  Tiếp theo chúng ta sẽ dùng access key và secret access key đã tạo để upload 1 file lên S3 bucket.\n"
+	"content": "Generate IAM user and access key  Go to IAM service administration interface   Click Users.  Click Add users  Set User name as iamaccesskey.   Click on Programmatic access. ( This option allows using access key and secret access key for AWS API , CLI , SDK ) Click Next: Permissions.  Click Attach existing policies directly.   In the Filter policies box, enter S3. Click AmazonS3FullAccess, we will grant full access to access and upload files to the S3 bucket we created in the previous step. Click Next: Tags.   Click Next: Review, then click Create user.\n  After creating a successful user, click Show to display the Secret access key value.\n   Please save the Access key ID + Secret access key value pair to serve the following steps of the workshop. You can also click Download .csv to download the Access key ID + Secret access key as csv.  Next we will use the generated access key and secret access key to upload a file to the S3 bucket.\n"
 },
 {
-	"uri": "/2-accesskey/2.2-useaccesskey/",
-	"title": "Sử dụng access key",
+	"uri": "/",
+	"title": "Grant application permissions via IAM Role",
 	"tags": [],
 	"description": "",
-	"content": "Sử dụng access key  Quay lại giao diện của máy chủ EC2 chúng ta đã kết nối tới.   Chạy câu lệnh sau để cài đặt AWS SDK cho Python.  sudo yum install pip -y\rsudo pip install boto3 Sau khi quá trình cài đặt hoàn tất , chạy lệnh sau để tạo ra file test.txt để chúng ta thử nghiệm upload.  touch test.txt\rChạy lệnh sau để tạo file ứng dụng python.   Lưu ý thay các giá trị , và phù hợp với giá trị của bạn.  touch upload-s3-usingaccesskey.py\recho \u0026#34;import boto3\u0026#34; \u0026gt; upload-s3-usingaccesskey.py\recho \u0026#34;s3 = boto3.client( \u0026#39;s3\u0026#39;, aws_access_key_id=\u0026#39;\u0026lt;ACCESSKEY\u0026gt;\u0026#39;, aws_secret_access_key=\u0026#39;\u0026lt;SECRETACCESSKEY\u0026gt;\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingaccesskey.py\recho \u0026#34;s3.upload_file(\u0026#39;test.txt\u0026#39;, \u0026#39;\u0026lt;S3BUCKETNAME\u0026gt;\u0026#39;, \u0026#39;test.txt\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingaccesskey.py\rThực hiện chạy ứng dụng python của chúng ta để upload file lên S3 bucket.  python upload-s3-usingaccesskey.py\rTruy cập vào giao diện dịch vụ S3.   Click S3 bucket s3-instancerole-001. Kiểm tra file đã được upload thành công lên S3 bucket.  Khi chúng ta sử dụng access key thì chúng ta đang chạy ứng dụng với quyền quản trị full dịch vụ S3 được cấp cho IAM user iamaccesskey mà chúng ta đã tạo. Việc sử dụng access key như trên sẽ rất nguy hiểm vì dễ bị lộ thông tin access key khi chúng ta upload code lên những public repo như GitHub chẳng hạn. Việc đưa trực tiếp access key vào trong code không được khuyến khích vì dẫn tới các rủi ro trong việc bảo mật, ở phần tiếp theo thay vì sử dụng access key , chúng ta sẽ thử sử dụng IAM role nhé.\n"
+	"content": "Authorize applications to access AWS services via IAM Role Overview In this workshop, you will learn how to grant your application access to AWS services.\nThrough the workshop we will learn:\n How to grant access to the application through accesskey / secretaccesskey and why it should not be used. How to grant access to the application through the IAM Role on EC2.  Content  Prepare Use accesskey IAM role on EC2 Resource Cleanup  "
 },
 {
-	"uri": "/2-accesskey/",
-	"title": "Sử dụng access key",
+	"uri": "/1-prepare/",
+	"title": "Preparation",
 	"tags": [],
 	"description": "",
-	"content": "Sử dụng accesskey Trong phần này, chúng ta sẽ tạo một IAM user cùng với accesskey / secretaccesskey để sử dụng cho ứng dụng python của chúng ta upload 1 object lên S3 bucket chúng ta đã tạo.\nNội dung  Tạo IAM user và accesskey Sử dụng accesskey  "
-},
-{
-	"uri": "/3-iamroleec2/3.2-useiamrole/",
-	"title": "Sử dụng IAM role",
-	"tags": [],
-	"description": "",
-	"content": "Sử dụng IAM role  Truy cập vào giao diện quản trị EC2   Click chọn EC2 instance chúng ta đã tạo. Click Actions. Click Security. Click Modify IAM role.  Click chọn role ec2roles3upload.   Click Save.  Quay trở lại giao diện dòng lệnh của EC2 instance.  Chạy lệnh sau để tạo file ứng dụng python. Lưu ý thay giá trị phù hợp với giá trị của bạn.    touch upload-s3-usingec2role.py\recho \u0026#34;import boto3\u0026#34; \u0026gt; upload-s3-usingec2role.py\recho \u0026#34;s3 = boto3.client( \u0026#39;s3\u0026#39; )\u0026#34; \u0026gt;\u0026gt; upload-s3-usingec2role.py\recho \u0026#34;s3.upload_file(\u0026#39;test.txt\u0026#39;, \u0026#39;\u0026lt;S3BUCKETNAME\u0026gt;\u0026#39;, \u0026#39;test.txt\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingec2role.py\rThực hiện chạy ứng dụng python của chúng ta để upload file lên S3 bucket.  python upload-s3-usingec2role.py\rTruy cập vào giao diện dịch vụ S3.   Click S3 bucket s3-instancerole-001. Kiểm tra file đã được upload thành công lên S3 bucket.  Khi sử dụng IAM role gán vào EC2 instance ( còn gọi là EC2 instance profile ).Ứng dụng trên máy chủ EC2 truy xuất thông tin xác thực bảo mật được cung cấp bởi IAM Role từ EC2 metadata iam/ security-credentials/role-name. Ứng dụng được cấp quyền cho các hành động và tài nguyên mà chúng ta đã xác định cho IAM role thông qua thông tin xác thực bảo mật được liên kết với IAM role.\n\rChúng ta có thể kiểm tra thông tin xác thực bảo mật được tạo ra cho IAM role ec2roles3upload bằng câu lệnh sau . Chúng ta có thể thấy thông tin chứng thực có thời gian hết hạn ( Expiration ) và sẽ được tự động làm mới sau khoản thời gian hết hạn này.\ncurl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload\rKhi chúng ta thực hiện gán EC2 role vào EC2 instance thì việc sinh ra thông tin chứng thực tạm thời được thực thi tự động cho chúng ta thông qua một dịch vụ là Security Token Service ( STS ). Chúng ta cũng có thể sử dụng AWS CLI trong EC2 instance đã được gán IAM role mà không cần cấu hình. ( aws configure )\n\rChạy câu lệnh sau để liệt kê S3 bucket trong account:\naws s3 ls\r"
+	"content": "Preparation for Workshop In this section, we will perform environment creation for the workshop including creating EC2 instance and creating S3 bucket.\nContent  Create EC2 Instance Create S3 bucket  "
 },
 {
 	"uri": "/1-prepare/1.2-creates3/",
-	"title": "Tạo S3 bucket",
+	"title": "Create S3 bucket",
 	"tags": [],
 	"description": "",
-	"content": "Tạo S3 bucket  Truy cập vào giao diện quản trị dịch vụ S3   Click Create bucket.  Đặt tên s3 bucket của chúng ta là s3-instancerole ( bạn có thể thêm số suffix phía sau ví dụ s3-instancerole-1000 vì tên s3 bucket phải đảm bảo không bị trùng.)   Kéo màn hình xuống dưới, sau đó click Create bucket.   Đảm bảo bucket được tạo thành công như hình dưới, trước khi qua các bước tiếp theo.\n  "
+	"content": "Create S3 bucket   Go to S3 service management interface\n Click Create bucket.    Name our s3 bucket s3-instancerole-001 (you can add the suffix number after the example s3-instancerole-1000 because the s3 bucket name must not be duplicated.)   Drag the screen down, then click Create bucket.   Make sure the bucket is successfully created as shown below, before proceeding to the next steps.\n  "
+},
+{
+	"uri": "/2-accesskey/2.2-useaccesskey/",
+	"title": "Use access key",
+	"tags": [],
+	"description": "",
+	"content": "Using access key  Go back to the interface of the EC2 server we connected to.   Run the following command to install the AWS SDK for Python.  sudo yum install pip -y\rsudo pip install boto3 After the installation is complete, run the following command to create a test.txt file for us to test upload.  touch test.txt Run the following command to create the python application file.   Note that the , and values ​​match your values.  touch upload-s3-usingaccesskey.py echo \u0026#34;import boto3\u0026#34; \u0026gt; upload-s3-usingaccesskey.py echo \u0026#34;s3 = boto3.client( \u0026#39;s3\u0026#39;, aws_access_key_id=\u0026#39;\u0026lt;ACCESSKEY\u0026gt;\u0026#39;, aws_secret_access_key=\u0026#39;\u0026lt;SECRETACCESSKEY\u0026gt;\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingaccesskey.py echo \u0026#34;s3.upload_file(\u0026#39;test.txt\u0026#39;, \u0026#39;\u0026lt;S3BUCKETNAME\u0026gt;\u0026#39;, \u0026#39;test.txt\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingaccesskey.py Let\u0026rsquo;s run our python application to upload files to the S3 bucket.  python upload-s3-usingaccesskey.py Access the S3 service interface.   Click S3 bucket s3-instancerole-001. Check that the file has been successfully uploaded to the S3 bucket.  When we use the access key we are running the application with full S3 service admin rights granted to the IAM user iamaccesskey that we created. Using the above access key will be very dangerous because it is easy to reveal the access key information when we upload the code to public repos like GitHub, for example. Putting the access key directly into the code is not recommended because it leads to security risks, in the next section instead of using the access key, we will try to use the IAM role.\n"
+},
+{
+	"uri": "/2-accesskey/",
+	"title": "Use access key",
+	"tags": [],
+	"description": "",
+	"content": "Using accesskey In this section, we will create an IAM user with an accesskey / secretaccesskey to use for our python application to upload an object to the S3 bucket we created.\nContent  Create IAM user and accesskey Use access key  "
+},
+{
+	"uri": "/3-iamroleec2/3.2-useiamrole/",
+	"title": "Using IAM role",
+	"tags": [],
+	"description": "",
+	"content": "Using IAM role  Go to EC2 admin interface   Click on the EC2 instance we created. Click Actions. Click Security. Click Modify IAM role.  Click the role ec2roles3upload.   Click Save.  Return to the command line interface of the EC2 instance.  Run the following command to create a python application file. Note that the value should match your value.    touch upload-s3-usingec2role.py echo \u0026#34;import boto3\u0026#34; \u0026gt; upload-s3-usingec2role.py echo \u0026#34;s3 = boto3.client( \u0026#39;s3\u0026#39; )\u0026#34; \u0026gt;\u0026gt; upload-s3-usingec2role.py echo \u0026#34;s3.upload_file(\u0026#39;test.txt\u0026#39;, \u0026#39;\u0026lt;S3BUCKETNAME\u0026gt;\u0026#39;, \u0026#39;test.txt\u0026#39;)\u0026#34; \u0026gt;\u0026gt; upload-s3-usingec2role.py Let\u0026rsquo;s run our python application to upload files to the S3 bucket.  python upload-s3-usingec2role.py Access the S3 service interface.   Click S3 bucket s3-instancerole-001. Check that the file has been successfully uploaded to the S3 bucket.  When using an IAM role assigned to an EC2 instance (also known as an EC2 instance profile). The application on the EC2 server retrieves the security credentials provided by the IAM Role from the EC2 metadata iam/ security-credentials/role -name. The application is authorized for the actions and resources that we have defined for the IAM role through the security credentials associated with the IAM role.\n\rWe can check the security credentials generated for the IAM role ec2roles3upload with the following command. We can see that the credentials have an expiration time ( Expiration ) and will be automatically refreshed after this expiration period.\ncurl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload When we assign an EC2 role to an EC2 instance, the generation of temporary credentials is automatically done for us through a service called Security Token Service ( STS ). We can also use the AWS CLI in an EC2 instance that has been assigned the IAM role without any configuration. ( aws configure )\n\rRun the following command to list the S3 bucket in the account:\naws s3 ls "
 },
 {
 	"uri": "/3-iamroleec2/",
-	"title": "IAM role trên EC2",
+	"title": "IAM role on EC2",
 	"tags": [],
 	"description": "",
-	"content": "IAM role trên EC2 Trong phần này, chúng ta sẽ tạo một IAM role và sử dụng IAM role cho ứng dụng của mình để có thể upload file lên S3 bucket.\nNội dung  Tạo IAM role Sử dụng IAM role  "
+	"content": "IAM role on EC2 In this section, we will create an IAM role and use the IAM role for our application to be able to upload files to the S3 bucket.\nContent  Create IAM role Using IAM role  "
 },
 {
 	"uri": "/4-cleanup/",
-	"title": "Dọn dẹp tài nguyên",
+	"title": "Clean up resources",
 	"tags": [],
 	"description": "",
-	"content": "Bạn sẽ dọn dẹp tài nguyên theo thứ tự sau:\n Truy cập vào giao diện quản lý của dịch vụ S3   Click chọn S3 bucket s3-instancerole-001. Click Empty.  Điền permanently delete để xác nhận, sau đó click Empty để xóa toàn bộ dữ liệu trong S3 bucket.   Click Exit để trở lại giao diện S3.  Click chọn S3 bucket s3-instancerole-001 , sau đó click Delete.   Điền tên bucket sau đó click Delete bucket để xóa S3 bucket.\n  Truy cập vào giao diện quản lý dịch vụ EC2\n   Click chọn Instance chúng ta tạo cho bài lab. Click Instance state. Click Terminate instance , sau đó click Terminate để xác nhận.  Truy cập vào giao diện quản lý dịch vụ IAM   Click Users Click chọn user iamaccesskey. Click Delete. Điền tên user amaccesskey và click Delete.  Click Roles.   Điền ec2 để tìm role chúng ta đã tạo. Click chọn role ec2roles3upload. Click Delete. Điền tên role ec2roles3upload và click Delete để xóa IAM Role.  "
+	"content": "You would clean up resources in the following order:\nDelete S3 bucket  Go to the management interface of the S3 service   Click on S3 bucket s3-instancerole-001. Click Empty.  Enter permanently delete to confirm, then click Empty to delete all data in S3 bucket.   Click Exit to return to the S3 interface.  Click the S3 bucket s3-instancerole-001 , then click Delete.  Enter the bucket name then click Delete bucket to delete the S3 bucket.  Delete EC2 Instance  Go to [EC2] service management interface(https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#Instances:)   Click on the Instance we created for the lab. Click Instance state. Click Terminate instance , then click Terminate to confirm.  Go to IAM service management interface   Click Users Click on user iamaccesskey. Click Delete. Enter the username iamaccesskey and click Delete.  Click Roles.   Enter ec2 to find the role we created. Click on role ec2roles3upload. Click Delete. Enter the role name ec2roles3upload and click Delete to delete the IAM Role.  "
 },
 {
 	"uri": "/categories/",

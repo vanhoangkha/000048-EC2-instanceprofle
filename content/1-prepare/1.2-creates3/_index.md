@@ -1,27 +1,26 @@
 +++
-title = "Tạo S3 bucket"
-date = 2021
+title = "Create S3 bucket"
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
 +++
 
 
-#### Tạo S3 bucket
+#### Create S3 bucket
 
-1. Truy cập vào [giao diện quản trị dịch vụ S3](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1&region=ap-southeast-1)
+1. Go to [S3 service management interface](https://s3.console.aws.amazon.com/s3/home)
 
-  + Click **Create bucket**.
+   + Click **Create bucket**.
 
 ![Role](/images/role/003.png?width==90pc)
 
-2. Đặt tên s3 bucket của chúng ta là **s3-instancerole** ( bạn có thể thêm số suffix phía sau ví dụ s3-instancerole-1000 vì tên s3 bucket phải đảm bảo không bị trùng.)
+2. Name our s3 bucket **s3-instancerole-001** (you can add the suffix number after the example s3-instancerole-1000 because the s3 bucket name must not be duplicated.)
 
 ![Role](/images/role/004.png?width==90pc)
 
-3. Kéo màn hình xuống dưới, sau đó click **Create bucket**.
+3. Drag the screen down, then click **Create bucket**.
 ![Role](/images/role/005.png?width==90pc)
 
-4. Đảm bảo bucket được tạo thành công như hình dưới, trước khi qua các bước tiếp theo.
+4. Make sure the bucket is successfully created as shown below, before proceeding to the next steps.
 
 ![Role](/images/role/006.png?width==90pc)

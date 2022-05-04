@@ -1,25 +1,25 @@
 +++
-title = "Cấp quyền cho ứng dụng với IAM Role"
-date = 2021
+title = "Grant application permissions via IAM Role"
 weight = 1
 chapter = false
 +++
 
-# Cấp quyền cho ứng dụng truy cập dịch vụ AWS với IAM Role
+# Authorize applications to access AWS services via IAM Role
 
-#### Tổng quan
+#### Overview
 
-Trong workshop này, bạn sẽ học cách cấp quyền truy cập cho ứng dụng của bạn có thể truy cập tới các dịch vụ của AWS.
+In this workshop, you will learn how to grant your application access to AWS services.
 
-#### Mục tiêu
+Through the workshop we will learn:
 
-Thông qua workshop chúng ta sẽ nắm được:
++ How to grant access to the application through accesskey / secretaccesskey and why it should not be used.
++ How to grant access to the application through the IAM Role on EC2.
 
-+ Cách thức cấp quyền truy cập cho ứng dụng thông qua accesskey/secretaccesskey và tại sao không nên sử dụng nó.
-+ Cách thức cấp quyền truy cập cho ứng dụng thông qua IAM Role trên EC2.
+![SystemsManager](../images/serviceicon.png?featherlight=false&width=10pc)
 
-#### Nội dung
-1. [Chuẩn bị](1-prepare/)
-2. [Sử dụng accesskey](2-accesskey/)
-3. [IAM role trên EC2](3-iamroleec2/)
-4. [Dọn dẹp tài nguyên](4-cleanup/)
+#### Content
+
+1. [Prepare](1-prepare/)
+2. [Use accesskey](2-accesskey/)
+3. [IAM role on EC2](3-iamroleec2/)
+4. [Resource Cleanup](4-cleanup/)

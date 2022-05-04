@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chuẩn bị on EC2 Instance Profile</title>
+    <title>Preparation on EC2 Instance Profile</title>
     <link>/1-prepare/</link>
-    <description>Recent content in Chuẩn bị on EC2 Instance Profile</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate>
-    
-	<atom:link href="/1-prepare/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <description>Recent content in Preparation on EC2 Instance Profile</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/1-prepare/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

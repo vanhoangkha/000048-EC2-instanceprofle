@@ -1,6 +1,5 @@
 +++
 title = "Sử dụng IAM role"
-date = 2021
 weight = 2
 chapter = false
 pre = "<b>3.2 </b>"

@@ -1,6 +1,5 @@
 +++
 title = "Tạo S3 bucket"
-date = 2021
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
@@ -9,7 +8,7 @@ pre = "<b>1.2 </b>"
 
 #### Tạo S3 bucket
 
-1. Truy cập vào [giao diện quản trị dịch vụ S3](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1&region=ap-southeast-1)
+1. Truy cập vào [giao diện quản trị dịch vụ S3](https://s3.console.aws.amazon.com/s3/)
 
   + Click **Create bucket**.
 

@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/1-prepare/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-prepare/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-prepare/"
-                />
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url>
-  
   <url>
     <loc>/1-prepare/1.1-createec2/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -45,11 +13,8 @@
                 hreflang="en"
                 href="/1-prepare/1.1-createec2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/3-iamroleec2/3.1-createrole/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -60,11 +25,8 @@
                 hreflang="en"
                 href="/3-iamroleec2/3.1-createrole/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/2-accesskey/2.1-createiam/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -75,56 +37,32 @@
                 hreflang="en"
                 href="/2-accesskey/2.1-createiam/"
                 />
-  </url>
-  
-  <url>
-    <loc>/2-accesskey/2.2-useaccesskey/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-accesskey/2.2-useaccesskey/"
+                href="/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-accesskey/2.2-useaccesskey/"
+                href="/"
                 />
-  </url>
-  
-  <url>
-    <loc>/2-accesskey/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+  </url><url>
+    <loc>/1-prepare/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-accesskey/"
+                href="/vi/1-prepare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-accesskey/"
+                href="/1-prepare/"
                 />
-  </url>
-  
-  <url>
-    <loc>/3-iamroleec2/3.2-useiamrole/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-iamroleec2/3.2-useiamrole/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-iamroleec2/3.2-useiamrole/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/1-prepare/1.2-creates3/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -135,11 +73,44 @@
                 hreflang="en"
                 href="/1-prepare/1.2-creates3/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/2-accesskey/2.2-useaccesskey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-accesskey/2.2-useaccesskey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-accesskey/2.2-useaccesskey/"
+                />
+  </url><url>
+    <loc>/2-accesskey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-accesskey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-accesskey/"
+                />
+  </url><url>
+    <loc>/3-iamroleec2/3.2-useiamrole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-iamroleec2/3.2-useiamrole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-iamroleec2/3.2-useiamrole/"
+                />
+  </url><url>
     <loc>/3-iamroleec2/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -150,11 +121,8 @@
                 hreflang="en"
                 href="/3-iamroleec2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/4-cleanup/</loc>
-    <lastmod>2021-07-09T14:40:59+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -165,9 +133,7 @@
                 hreflang="en"
                 href="/4-cleanup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -179,9 +145,7 @@
                 hreflang="en"
                 href="/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -194,5 +158,4 @@
                 href="/tags/"
                 />
   </url>
-  
 </urlset>

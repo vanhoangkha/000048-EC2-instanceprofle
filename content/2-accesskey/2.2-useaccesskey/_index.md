@@ -1,30 +1,29 @@
 +++
-title = "Sử dụng access key"
-date = 2021
+title = "Use access key"
 weight = 2
 chapter = false
 pre = "<b>2.2 </b>"
 +++
 
 
-#### Sử dụng access key
+#### Using access key
 
-1. Quay lại giao diện của máy chủ EC2 chúng ta đã kết nối tới.
-  + Chạy câu lệnh sau để cài đặt AWS SDK cho Python.
+1. Go back to the interface of the EC2 server we connected to.
+  + Run the following command to install the AWS SDK for Python.
 
 ```
 sudo yum install pip -y
-sudo pip install boto3 
+sudo pip install boto3
 ```
 
-2. Sau khi quá trình cài đặt hoàn tất , chạy lệnh sau để tạo ra file test.txt để chúng ta thử nghiệm upload.
+2. After the installation is complete, run the following command to create a test.txt file for us to test upload.
 
 ```
 touch test.txt
 ```
 
-3. Chạy lệnh sau để tạo file ứng dụng python.
- + Lưu ý thay các giá trị <ACCESSKEY> , <SECRETACCESSKEY> và <S3BUCKETNAME> phù hợp với giá trị của bạn.
+3. Run the following command to create the python application file.
+ + Note that the <ACCESSKEY> , <SECRETACCESSKEY> and <S3BUCKETNAME> values ​​match your values.
 
 ```bash
 touch upload-s3-usingaccesskey.py
@@ -33,17 +32,17 @@ echo "s3 = boto3.client( 's3', aws_access_key_id='<ACCESSKEY>', aws_secret_acces
 echo "s3.upload_file('test.txt', '<S3BUCKETNAME>', 'test.txt')" >> upload-s3-usingaccesskey.py
 ```
 
-4. Thực hiện chạy ứng dụng python của chúng ta để upload file lên S3 bucket.
+4. Let's run our python application to upload files to the S3 bucket.
 
 ```
 python upload-s3-usingaccesskey.py
 ```
 
-5.  Truy cập vào giao diện dịch vụ S3.
+5. Access the S3 service interface.
   + Click S3 bucket **s3-instancerole-001**.
-  + Kiểm tra file đã được upload thành công lên S3 bucket.
+  + Check that the file has been successfully uploaded to the S3 bucket.
 
 ![Role](/images/role/012.png?width==90pc)
 
-Khi chúng ta sử dụng access key thì chúng ta đang chạy ứng dụng với quyền quản trị full dịch vụ S3 được cấp cho IAM user **iamaccesskey** mà chúng ta đã tạo. Việc sử dụng access key như trên sẽ rất nguy hiểm vì dễ bị lộ thông tin access key khi chúng ta upload code lên những public repo như GitHub chẳng hạn.
-Việc đưa trực tiếp access key vào trong code không được khuyến khích vì dẫn tới các rủi ro trong việc bảo mật, ở phần tiếp theo thay vì sử dụng access key , chúng ta sẽ thử sử dụng IAM role nhé.
+When we use the access key we are running the application with full S3 service admin rights granted to the IAM user **iamaccesskey** that we created. Using the above access key will be very dangerous because it is easy to reveal the access key information when we upload the code to public repos like GitHub, for example.
+Putting the access key directly into the code is not recommended because it leads to security risks, in the next section instead of using the access key, we will try to use the IAM role.

@@ -1,45 +1,48 @@
 +++
-title = "Dọn dẹp tài nguyên"
-date = 2021-07-09T14:40:59+07:00
+title = "Clean up resources"
 weight = 4
 chapter = false
 pre = "<b>4. </b>"
 +++
 
-Bạn sẽ dọn dẹp tài nguyên theo thứ tự sau:
+You would clean up resources in the following order:
 
-1. Truy cập vào [giao diện quản lý của dịch vụ S3](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1&region=ap-southeast-1)
-  + Click chọn S3 bucket **s3-instancerole-001**.
+#### Delete S3 bucket
+
+1. Go to [the management interface of the S3 service](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1&region=ap-southeast-1)
+  + Click on S3 bucket **s3-instancerole-001**.
   + Click **Empty**.
 
 ![Role](/images/role/c01.png?width==90pc)
 
-2. Điền **permanently delete** để xác nhận, sau đó click **Empty** để xóa toàn bộ dữ liệu trong S3 bucket.
-  + Click **Exit** để trở lại giao diện S3.
+2. Enter **permanently delete** to confirm, then click **Empty** to delete all data in S3 bucket.
+  + Click **Exit** to return to the S3 interface.
 
-3. Click chọn S3 bucket **s3-instancerole-001** , sau đó click **Delete**.
+3. Click the S3 bucket **s3-instancerole-001** , then click **Delete**.
  
 ![Role](/images/role/c02.png?width==90pc)
 
-4. Điền tên bucket sau đó click **Delete bucket** để xóa S3 bucket.
+4. Enter the bucket name then click **Delete bucket** to delete the S3 bucket.
 
-5. Truy cập vào [giao diện quản lý dịch vụ EC2](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#Instances:)
-  + Click chọn Instance chúng ta tạo cho bài lab.
+#### Delete EC2 Instance
+
+1. Go to [EC2] service management interface(https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-1#Instances:)
+  + Click on the Instance we created for the lab.
   + Click **Instance state**.
-  + Click **Terminate instance** , sau đó click **Terminate** để xác nhận.
+  + Click **Terminate instance** , then click **Terminate** to confirm.
  
   ![Role](/images/role/c03.png?width==90pc)
 
-6. Truy cập vào [giao diện quản lý dịch vụ IAM](https://console.aws.amazon.com/iamv2/home#/users)
+2. Go to [IAM service management interface](https://console.aws.amazon.com/iamv2/home#/users)
   + Click **Users**
-  + Click chọn user **iamaccesskey**.
-  + Click **Delete**. Điền tên user **amaccesskey** và click **Delete**.
+  + Click on user **iamaccesskey**.
+  + Click **Delete**. Enter the username **iamaccesskey** and click **Delete**.
 
 ![Role](/images/role/c04.png?width==90pc)
 
-7. Click **Roles**.
-  + Điền **ec2** để tìm role chúng ta đã tạo.
-  + Click chọn role **ec2roles3upload**.
-  + Click **Delete**. Điền tên role **ec2roles3upload** và click **Delete** để xóa IAM Role.
+3. Click **Roles**.
+  + Enter **ec2** to find the role we created.
+  + Click on role **ec2roles3upload**.
+  + Click **Delete**. Enter the role name **ec2roles3upload** and click **Delete** to delete the IAM Role.
 
 ![Role](/images/role/c05.png?width==90pc)
