@@ -15,7 +15,7 @@ Thông qua workshop chúng ta sẽ nắm được:
 + Cách thức cấp quyền truy cập cho ứng dụng thông qua accesskey/secretaccesskey và tại sao không nên sử dụng nó.
 + Cách thức cấp quyền truy cập cho ứng dụng thông qua IAM Role trên EC2.
 
-{{< figure src="../images/serviceicon2.png" title="AWS IAM" width=150pc >}}
+{{< figure src="/images/serviceicon2.png" title="AWS IAM" width=150pc >}}
 
 #### Nội dung
 
