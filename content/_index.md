@@ -15,7 +15,7 @@ Through the workshop we will learn:
 + How to grant access to the application through accesskey / secretaccesskey and why it should not be used.
 + How to grant access to the application through the IAM Role on EC2.
 
-{{< figure src="/images/serviceicon2.png" title="AWS IAM" width=150pc >}}
+{{< figure src="/images/serviceicon.png" title="AWS IAM" width=150pc >}}
 
 #### Content
 
