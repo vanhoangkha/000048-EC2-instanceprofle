@@ -42,7 +42,7 @@ python upload-s3-usingaccesskey.py
   + Click S3 bucket **s3-instancerole-001**.
   + Check that the file has been successfully uploaded to the S3 bucket.
 
-![Role](/images/role/012.png?width==90pc)
+![Role](/images/role/012.png?featherlight=false&width=90pc)
 
 When we use the access key we are running the application with full S3 service admin rights granted to the IAM user **iamaccesskey** that we created. Using the above access key will be very dangerous because it is easy to reveal the access key information when we upload the code to public repos like GitHub, for example.
 Putting the access key directly into the code is not recommended because it leads to security risks, in the next section instead of using the access key, we will try to use the IAM role.

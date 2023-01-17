@@ -15,14 +15,14 @@ pre = "<b>3.2 </b>"
   + Click **Modify IAM role**.
 
 
-![Role](/images/role/018.png?width==90pc)
+![Role](/images/role/018.png?featherlight=false&width=90pc)
 
 
 2. Click the role **ec2roles3upload**.
   + Click **Save**.
 
 
-![Role](/images/role/019.png?width==90pc)
+![Role](/images/role/019.png?featherlight=false&width=90pc)
 
 
 3. Return to the command line interface of the EC2 instance.
@@ -37,7 +37,7 @@ echo "s3.upload_file('test.txt', '<S3BUCKETNAME>', 'test.txt')" >> upload-s3-usi
 ```
 
 
-![Role](/images/role/020.png?width==90pc)
+![Role](/images/role/020.png?featherlight=false&width=90pc)
 
 
 4. Let's run our python application to upload files to the S3 bucket.
@@ -50,7 +50,7 @@ python upload-s3-usingec2role.py
   + Click S3 bucket **s3-instancerole-001**.
   + Check that the file has been successfully uploaded to the S3 bucket.
 
-![Role](/images/role/021.png?width==90pc)
+![Role](/images/role/021.png?featherlight=false&width=90pc)
 
 {{%notice tip%}}
 When using an IAM role assigned to an EC2 instance (also known as an EC2 instance profile). The application on the EC2 server retrieves the security credentials provided by the IAM Role from the EC2 metadata **iam/ security-credentials/role -name**. The application is authorized for the actions and resources that we have defined for the IAM role through the security credentials associated with the IAM role.
@@ -62,7 +62,7 @@ We can check the security credentials generated for the IAM role ec2roles3upload
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload
 ```
 
-![Role](/images/role/022.png?width==90pc)
+![Role](/images/role/022.png?featherlight=false&width=90pc)
 
 {{%notice tip%}}
 When we assign an EC2 role to an EC2 instance, the generation of temporary credentials is automatically done for us through a service called **Security Token Service** ( **STS** ). We can also use the AWS CLI in an EC2 instance that has been assigned the IAM role without any configuration. ( **aws configure** )
@@ -74,4 +74,4 @@ aws s3 ls
 ```
 
 
-![Role](/images/role/023.png?width==90pc)
+![Role](/images/role/023.png?featherlight=false&width=90pc)

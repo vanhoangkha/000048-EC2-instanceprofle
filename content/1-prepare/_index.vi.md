@@ -10,7 +10,7 @@ pre = "<b>1. </b>"
 
 Trong phần này chúng ta sẽ thực hiện tạo môi trường cho workshop bao gồm việc tạo EC2 instance và tạo S3 bucket.
 
-![Role](/images/role/a01.png?width==90pc)
+![Role](/images/role/a01.png?featherlight=false&width=60pc)
 
 #### Nội dung
 1. [Tạo EC2 Instance](1.1-createec2/)

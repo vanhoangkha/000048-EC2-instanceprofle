@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Using IAM role :: EC2 Instance Profile</title>
 
     
-    <link href="/css/nucleus.css?1651906893" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1651906893" rel="stylesheet">
-    <link href="/css/hybrid.css?1651906893" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1651906893" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1651906893" rel="stylesheet">
-    <link href="/css/auto-complete.css?1651906893" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1651906893" rel="stylesheet">
-    <link href="/css/theme.css?1651906893" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1651906893" rel="stylesheet">
+    <link href="/css/nucleus.css?1673988731" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673988731" rel="stylesheet">
+    <link href="/css/hybrid.css?1673988731" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673988731" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673988731" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673988731" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673988731" rel="stylesheet">
+    <link href="/css/theme.css?1673988731" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673988731" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1651906893" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673988731" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1651906893"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673988731"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1651906893"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1651906893"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673988731"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673988731"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1651906893"></script>
+<script type="text/javascript" src="/js/search.js?1673988731"></script>
 
     
   </div>
@@ -473,7 +473,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-05-2022</font></i>
+        <i><font color=orange>18-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -579,14 +579,14 @@
 <li>Click <strong>Security</strong>.</li>
 <li>Click <strong>Modify IAM role</strong>.</li>
 </ul>
-<p><img src="/images/role/018.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/018.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="2">
 <li>Click the role <strong>ec2roles3upload</strong>.</li>
 </ol>
 <ul>
 <li>Click <strong>Save</strong>.</li>
 </ul>
-<p><img src="/images/role/019.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/019.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="3">
 <li>Return to the command line interface of the EC2 instance.
 <ul>
@@ -599,7 +599,7 @@
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;import boto3&#34;</span> &gt; upload-s3-usingec2role.py
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;s3 = boto3.client( &#39;s3&#39; )&#34;</span> &gt;&gt; upload-s3-usingec2role.py
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;s3.upload_file(&#39;test.txt&#39;, &#39;&lt;S3BUCKETNAME&gt;&#39;, &#39;test.txt&#39;)&#34;</span> &gt;&gt; upload-s3-usingec2role.py
-</span></span></code></pre></div><p><img src="/images/role/020.png?width==90pc" alt="Role"></p>
+</span></span></code></pre></div><p><img src="/images/role/020.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="4">
 <li>Let&rsquo;s run our python application to upload files to the S3 bucket.</li>
 </ol>
@@ -611,21 +611,21 @@
 <li>Click S3 bucket <strong>s3-instancerole-001</strong>.</li>
 <li>Check that the file has been successfully uploaded to the S3 bucket.</li>
 </ul>
-<p><img src="/images/role/021.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/021.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 
 <div class="notices tip" ><p>When using an IAM role assigned to an EC2 instance (also known as an EC2 instance profile). The application on the EC2 server retrieves the security credentials provided by the IAM Role from the EC2 metadata <strong>iam/ security-credentials/role -name</strong>. The application is authorized for the actions and resources that we have defined for the IAM role through the security credentials associated with the IAM role.</p>
 </div>
 
 <p>We can check the security credentials generated for the IAM role ec2roles3upload with the following command. We can see that the credentials have an expiration time ( <strong>Expiration</strong> ) and will be automatically refreshed after this expiration period.</p>
 <pre tabindex="0"><code>curl http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2roles3upload
-</code></pre><p><img src="/images/role/022.png?width==90pc" alt="Role"></p>
+</code></pre><p><img src="/images/role/022.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 
 <div class="notices tip" ><p>When we assign an EC2 role to an EC2 instance, the generation of temporary credentials is automatically done for us through a service called <strong>Security Token Service</strong> ( <strong>STS</strong> ). We can also use the AWS CLI in an EC2 instance that has been assigned the IAM role without any configuration. ( <strong>aws configure</strong> )</p>
 </div>
 
 <p>Run the following command to list the S3 bucket in the account:</p>
 <pre tabindex="0"><code>aws s3 ls
-</code></pre><p><img src="/images/role/023.png?width==90pc" alt="Role"></p>
+</code></pre><p><img src="/images/role/023.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 
 
 
@@ -860,19 +860,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1651906893"></script>
-    <script src="/js/perfect-scrollbar.min.js?1651906893"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1651906893"></script>
-    <script src="/js/jquery.sticky.js?1651906893"></script>
-    <script src="/js/featherlight.min.js?1651906893"></script>
-    <script src="/js/highlight.pack.js?1651906893"></script>
+    <script src="/js/clipboard.min.js?1673988731"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673988731"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673988731"></script>
+    <script src="/js/jquery.sticky.js?1673988731"></script>
+    <script src="/js/featherlight.min.js?1673988731"></script>
+    <script src="/js/highlight.pack.js?1673988731"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1651906893"></script>
-    <script src="/js/learn.js?1651906893"></script>
-    <script src="/js/hugo-learn.js?1651906893"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673988731"></script>
+    <script src="/js/learn.js?1673988731"></script>
+    <script src="/js/hugo-learn.js?1673988731"></script>
 
-    <link href="/mermaid/mermaid.css?1651906893" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1651906893"></script>
+    <link href="/mermaid/mermaid.css?1673988731" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673988731"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

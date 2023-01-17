@@ -10,7 +10,7 @@ pre = "<b>1. </b>"
 
 In this section, we will perform environment creation for the workshop including creating EC2 instance and creating S3 bucket.
 
-![Role](/images/role/a01.png?width==90pc)
+![Role](/images/role/a01.png?featherlight=false&width=60pc)
 
 #### Content
 1. [Create EC2 Instance](1.1-createec2/)

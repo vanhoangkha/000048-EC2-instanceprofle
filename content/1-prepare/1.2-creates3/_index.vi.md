@@ -12,15 +12,15 @@ pre = "<b>1.2 </b>"
 
   + Click **Create bucket**.
 
-![Role](/images/role/003.png?width==90pc)
+![Role](/images/role/003.png?featherlight=false&width=90pc)
 
 2. Đặt tên s3 bucket của chúng ta là **s3-instancerole-001** ( bạn có thể thêm số suffix phía sau ví dụ s3-instancerole-1000 vì tên s3 bucket phải đảm bảo không bị trùng.)
 
-![Role](/images/role/004.png?width==90pc)
+![Role](/images/role/004.png?featherlight=false&width=90pc)
 
 3. Kéo màn hình xuống dưới, sau đó click **Create bucket**.
-![Role](/images/role/005.png?width==90pc)
+![Role](/images/role/005.png?featherlight=false&width=90pc)
 
 4. Đảm bảo bucket được tạo thành công như hình dưới, trước khi qua các bước tiếp theo.
 
-![Role](/images/role/006.png?width==90pc)
+![Role](/images/role/006.png?featherlight=false&width=90pc)

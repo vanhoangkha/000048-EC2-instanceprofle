@@ -13,14 +13,14 @@ Bạn sẽ dọn dẹp tài nguyên theo thứ tự sau:
   + Click chọn S3 bucket **s3-instancerole-001**.
   + Click **Empty**.
 
-![Role](/images/role/c01.png?width==90pc)
+![Role](/images/role/c01.png?featherlight=false&width=90pc)
 
 2. Điền **permanently delete** để xác nhận, sau đó click **Empty** để xóa toàn bộ dữ liệu trong S3 bucket.
   + Click **Exit** để trở lại giao diện S3.
 
 3. Click chọn S3 bucket **s3-instancerole-001** , sau đó click **Delete**.
  
-![Role](/images/role/c02.png?width==90pc)
+![Role](/images/role/c02.png?featherlight=false&width=90pc)
 
 4. Điền tên bucket sau đó click **Delete bucket** để xóa S3 bucket.
 
@@ -31,18 +31,18 @@ Bạn sẽ dọn dẹp tài nguyên theo thứ tự sau:
   + Click **Instance state**.
   + Click **Terminate instance** , sau đó click **Terminate** để xác nhận.
  
-  ![Role](/images/role/c03.png?width==90pc)
+  ![Role](/images/role/c03.png?featherlight=false&width=90pc)
 
 2. Truy cập vào [giao diện quản lý dịch vụ IAM](https://console.aws.amazon.com/iamv2/home#/users)
   + Click **Users**
   + Click chọn user **iamaccesskey**.
   + Click **Delete**. Điền tên user **iamaccesskey** và click **Delete**.
 
-![Role](/images/role/c04.png?width==90pc)
+![Role](/images/role/c04.png?featherlight=false&width=90pc)
 
 3. Click **Roles**.
   + Điền **ec2** để tìm role chúng ta đã tạo.
   + Click chọn role **ec2roles3upload**.
   + Click **Delete**. Điền tên role **ec2roles3upload** và click **Delete** để xóa IAM Role.
 
-![Role](/images/role/c05.png?width==90pc)
+![Role](/images/role/c05.png?featherlight=false&width=90pc)

@@ -42,7 +42,7 @@ python upload-s3-usingaccesskey.py
   + Click S3 bucket **s3-instancerole-001**.
   + Kiểm tra file đã được upload thành công lên S3 bucket.
 
-![Role](/images/role/012.png?width==90pc)
+![Role](/images/role/012.png?featherlight=false&width=90pc)
 
 Khi chúng ta sử dụng access key thì chúng ta đang chạy ứng dụng với quyền quản trị full dịch vụ S3 được cấp cho IAM user **iamaccesskey** mà chúng ta đã tạo. Việc sử dụng access key như trên sẽ rất nguy hiểm vì dễ bị lộ thông tin access key khi chúng ta upload code lên những public repo như GitHub chẳng hạn.
 Việc đưa trực tiếp access key vào trong code không được khuyến khích vì dẫn tới các rủi ro trong việc bảo mật, ở phần tiếp theo thay vì sử dụng access key , chúng ta sẽ thử sử dụng IAM role nhé.

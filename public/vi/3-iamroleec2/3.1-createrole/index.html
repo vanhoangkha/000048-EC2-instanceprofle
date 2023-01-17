@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo IAM role :: EC2 Instance Profile</title>
 
     
-    <link href="/css/nucleus.css?1651906893" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1651906893" rel="stylesheet">
-    <link href="/css/hybrid.css?1651906893" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1651906893" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1651906893" rel="stylesheet">
-    <link href="/css/auto-complete.css?1651906893" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1651906893" rel="stylesheet">
-    <link href="/css/theme.css?1651906893" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1651906893" rel="stylesheet">
+    <link href="/css/nucleus.css?1673988731" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673988731" rel="stylesheet">
+    <link href="/css/hybrid.css?1673988731" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673988731" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673988731" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673988731" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673988731" rel="stylesheet">
+    <link href="/css/theme.css?1673988731" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673988731" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1651906893" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673988731" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1651906893"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673988731"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1651906893"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1651906893"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673988731"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673988731"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1651906893"></script>
+<script type="text/javascript" src="/js/search.js?1673988731"></script>
 
     
   </div>
@@ -473,7 +473,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>05-05-2022</font></i>
+        <i><font color=orange>18-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -576,18 +576,18 @@
 <ul>
 <li>Click <strong>Roles</strong>.</li>
 </ul>
-<p><img src="/images/role/013.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/013.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="2">
 <li>Click <strong>Create role</strong></li>
 </ol>
-<p><img src="/images/role/014.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/014.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="3">
 <li>Tại mục **Choose a use case ** chúng ta click chọn EC2 để tạo một IAM role sử dụng cho ứng dụng chạy bên trong EC2.</li>
 </ol>
 <ul>
 <li>Click <strong>Next:Permissions</strong></li>
 </ul>
-<p><img src="/images/role/015.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/015.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="4">
 <li>Tại ô Filter policies , điền <strong>S3</strong>.</li>
 </ol>
@@ -595,7 +595,7 @@
 <li>Click chọn <strong>AmazonS3FullAccess</strong>, chúng ta sẽ cấp quyền full access để truy cập và upload file lên S3 bucket chúng ta đã tạo.</li>
 <li>Click <strong>Next: Tags</strong>.</li>
 </ul>
-<p><img src="/images/role/016.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/016.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <ol start="5">
 <li>
 <p>Click <strong>Next: Review</strong>.</p>
@@ -607,7 +607,7 @@
 <ul>
 <li>Click <strong>Create role</strong>.</li>
 </ul>
-<p><img src="/images/role/017.png?width==90pc" alt="Role"></p>
+<p><img src="/images/role/017.png?featherlight=false&amp;width=90pc" alt="Role"></p>
 <p>Tiếp theo chúng ta sẽ dùng role này để gán vào EC2 instance và giúp ứng dụng của chúng ta có thể upload file lên S3 mà không cần sử dụng access key và secret access key trong code.</p>
 
 
@@ -840,19 +840,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1651906893"></script>
-    <script src="/js/perfect-scrollbar.min.js?1651906893"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1651906893"></script>
-    <script src="/js/jquery.sticky.js?1651906893"></script>
-    <script src="/js/featherlight.min.js?1651906893"></script>
-    <script src="/js/highlight.pack.js?1651906893"></script>
+    <script src="/js/clipboard.min.js?1673988731"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673988731"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673988731"></script>
+    <script src="/js/jquery.sticky.js?1673988731"></script>
+    <script src="/js/featherlight.min.js?1673988731"></script>
+    <script src="/js/highlight.pack.js?1673988731"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1651906893"></script>
-    <script src="/js/learn.js?1651906893"></script>
-    <script src="/js/hugo-learn.js?1651906893"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673988731"></script>
+    <script src="/js/learn.js?1673988731"></script>
+    <script src="/js/hugo-learn.js?1673988731"></script>
 
-    <link href="/mermaid/mermaid.css?1651906893" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1651906893"></script>
+    <link href="/mermaid/mermaid.css?1673988731" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673988731"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
