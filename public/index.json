@@ -22,10 +22,10 @@
 },
 {
 	"uri": "/",
-	"title": "Grant application permissions via IAM Role",
+	"title": "Granting authorization for an application to access AWS services with an IAM role.",
 	"tags": [],
 	"description": "",
-	"content": "Authorize applications to access AWS services via IAM Role Overview In this workshop, you will learn how to grant your application access to AWS services.\nThrough the workshop we will learn:\n How to grant access to the application through accesskey / secretaccesskey and why it should not be used. How to grant access to the application through the IAM Role on EC2.   AWS IAM   Content  Prepare Use accesskey IAM role on EC2 Resource Cleanup  "
+	"content": "Granting authorization for an application to access AWS services with an IAM role. Overview In this workshop, you will learn how to grant your application access to AWS services.\nThrough the workshop we will learn:\n How to grant access to the application through accesskey / secretaccesskey and why it should not be used. How to grant access to the application through the IAM Role on EC2.   AWS IAM   Content  Prepare Use accesskey IAM role on EC2 Resource Cleanup  "
 },
 {
 	"uri": "/1-prepare/",

@@ -1,10 +1,10 @@
 +++
-title = "Grant application permissions via IAM Role"
+title = "Granting authorization for an application to access AWS services with an IAM role."
 weight = 1
 chapter = false
 +++
 
-# Authorize applications to access AWS services via IAM Role
+# Granting authorization for an application to access AWS services with an IAM role.
 
 #### Overview
 

@@ -18,15 +18,9 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "EC2 Instance Profile"
+title = "Granting authorization for an application to access AWS services with an IAM role."
 weight = 1
 languageName = "English"
-
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "http://awsstudygroup.com"
-weight = 20
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group - FB Group"
@@ -35,7 +29,7 @@ url = "https://www.facebook.com/groups/660548818043427/"
 weight = 20
 
 [Languages.vi]
-title = "EC2 Instance Profile"
+title = "Cấp quyền cho ứng dụng truy cập dịch vụ AWS với IAM role"
 weight = 2
 languageName = "Tiếng Việt"
 
