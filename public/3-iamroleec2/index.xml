@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IAM role on EC2 on Granting authorization for an application to access AWS services with an IAM role.</title>
+    <title>IAM role on EC2 on GRANTING AUTHORIZATION FOR AN APPLICATION TO ACCESS AWS SERVICES WITH AN IAM ROLE</title>
     <link>/3-iamroleec2/</link>
-    <description>Recent content in IAM role on EC2 on Granting authorization for an application to access AWS services with an IAM role.</description>
+    <description>Recent content in IAM role on EC2 on GRANTING AUTHORIZATION FOR AN APPLICATION TO ACCESS AWS SERVICES WITH AN IAM ROLE</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/3-iamroleec2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create EC2 Instance on Granting authorization for an application to access AWS services with an IAM role.</title>
+    <title>Create EC2 Instance on GRANTING AUTHORIZATION FOR AN APPLICATION TO ACCESS AWS SERVICES WITH AN IAM ROLE</title>
     <link>/1-prepare/1.1-createec2/</link>
-    <description>Recent content in Create EC2 Instance on Granting authorization for an application to access AWS services with an IAM role.</description>
+    <description>Recent content in Create EC2 Instance on GRANTING AUTHORIZATION FOR AN APPLICATION TO ACCESS AWS SERVICES WITH AN IAM ROLE</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/1-prepare/1.1-createec2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

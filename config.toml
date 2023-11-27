@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Granting authorization for an application to access AWS services with an IAM role."
+title = "GRANTING AUTHORIZATION FOR AN APPLICATION TO ACCESS AWS SERVICES WITH AN IAM ROLE"
 weight = 1
 languageName = "English"
 
@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Cấp quyền cho ứng dụng truy cập dịch vụ AWS với IAM role"
+title = "CẤP QUYỀN CHO ỨNG DỤNG TRUY CẬP DỊCH VỤ AWS VỚI IAM ROLE"
 weight = 2
 languageName = "Tiếng Việt"
 
