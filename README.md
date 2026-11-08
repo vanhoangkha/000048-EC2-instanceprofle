@@ -1,4 +1,4 @@
-# 🔑 EC2 Instance Profile
+# EC2 Instance Profile
 
 Configure IAM roles for EC2 instances.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000048-EC2-instanceprofle/)**
+**[Start the workshop](https://vanhoangkha.github.io/000048-EC2-instanceprofle/)**
 
 ## Prerequisites
 
